@@ -13,30 +13,22 @@ int main(int argc, char *argv)
 
     for (int i = 0; i < length; i++)
     {
-        //printf("%p\n", ptr);
-        // printf("%c\n", code[i]);
         if (code[i] == '>')
         {
-            //printf("Shift right.\n");
             ptr++; //increases the value of the pointer, i mean the adress
-            //printf("Next ptr is:%p\n", ptr);
         }
         else if (code[i] == '<')
         {
-            //printf("Shift left.");
             ptr--; //decreases the value of the pointer
         }
         else if (code[i] == '+')
         {
             (*ptr)++; //increases the value pointed by ptr
-            //printer(emulptr, length);
         }
         else if (code[i] == '-')
         {
 
             (*ptr)--;
-            //printf("Eksi sensed.");
-            //printer(emulptr, length);
         }
         else if (code[i] == '.')
         {
@@ -49,7 +41,6 @@ int main(int argc, char *argv)
         }
         else if (code[i] == '[')
         {
-            //printf("Bracket found");
             if (*ptr == 0)
             {
                 for (int j = i; j < length; j++)
