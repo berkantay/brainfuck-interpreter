@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *code = "><<<<<>>>>++++++>>>]][][][>>>>]]";
+char *code = "><<<<<>>>>++++++>>>]][][][>>>>]]\0";
 
 int main(int argc, char *argv)
 {
 
     int length = strlen(code);
-    int *ptr = malloc(sizeof(char) * length);
+    char *ptr = (char *)calloc(length, sizeof(char));
+    printf("%d\n", length);
+
     // for (int j = 0; j < length; j++)
     // {
 
@@ -15,8 +17,9 @@ int main(int argc, char *argv)
 
     for (int i = 0; i < length; i++)
     {
-        printf("%d\n", ptr[i]);
+        //printf("%d\n", ptr[i]);
         printf("%c\n", code[i]);
-        printf("***************\n");
     }
+
+    return 0;
 }
