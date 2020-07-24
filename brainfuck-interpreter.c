@@ -78,6 +78,7 @@ void printer(char *buffer, int length)
     for (int i = 0; i < length; i++)
     {
         printf("%d-", buffer[i]);
-    }
+    }    
     printf("\n");
+    free(ptr);
 }
